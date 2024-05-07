@@ -1,3 +1,4 @@
+import { montserrat } from './ui/font';
 import './ui/global.css';
 
 export default function RootLayout({
@@ -7,8 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${montserrat.className} antialiased`}>
           {children}
+          <footer className='py-10 flex justify-center items-center'>
+            Footer de nextjs-dashboard
+          </footer>
       </body>
     </html>
   );
